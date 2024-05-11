@@ -26,7 +26,8 @@
     "dev:tailwind": "pnpm --filter @consent-nextjs/kitchen-sink-tailwind dev",
     "build:pkg": "pnpm --filter './packages/**' build && pnpm install",
     "clean:pkg": "pnpm --filter './packages/**' clean",
-    "publish:pkg": "pnpm --filter './packages/**' publish --access public"
+    "publish:pkg:legacy": "pnpm -r --filter './packages/**' publish --access public",
+    "publish:pkg": "pnpm --filter './packages/client' publish && pnpm --filter './packages/lang' publish && pnpm --filter './packages/ui' publish && pnpm --filter './packages/all-in-one' publish"
   },
   "devDependencies": {
     "eslint": "^9.2.0",

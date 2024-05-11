@@ -1,19 +1,25 @@
 # consent-nextjs
-- Cookie & Data Usage Consent Popup & Hooks for Next.js
-- Aims to provide fastest way to setting up consent popup on Next.js
+- Cookie & Private Data Usage Consent Management System for Next.js.
+- Aims to provide fastest way to setting it up.
+- Developer experience oriented.
+
+# Caveat
+
+- Next.js 14 currently has bugs regarding client component. It is encoraged to use nextjs canary version.
+- 👨‍⚖️The legal compliance of the provided text may vary by country. It's best to use it only for quick initial deployment and verification, and afterward, it's a good idea to seek legal advice.
 
 # Install
 
 ```
 # all in one install
 npm i consent-nextjs
-# separate install for user's need
-npm i @consent-nextjs/client @consent-nexjts/popup @consent-nextjs/lang
+# separate install
+npm i @consent-nextjs/client @consent-nexjts/ui @consent-nextjs/lang
 ```
 
 - `consent-nextjs`: all in one
-- `@consent-nextjs/client`: client related hooks
-- `@consent-nextjs/popup`: popup UI
+- `@consent-nextjs/client`: nextjs provider, client hooks
+- `@consent-nextjs/ui`: popup, banner UI
 - `@consent-nextjs/lang`: languages
 
 # Get Started
@@ -21,14 +27,16 @@ npm i @consent-nextjs/client @consent-nexjts/popup @consent-nextjs/lang
 ```tsx
 // --- consent.ts
 'use client';
-import { initUseConsent } from 'consent-nextjs'
+import { initUseConsent } from 'consent-nextjs';
 // import { initUseConsent } from '@consent-nextjs/client';
 
 export const { useConsent } = initUseConsent();
 
 // --- components/Popup.tsx
 import { enUS } from '@consent-nextjs/lang';
-import PopupConsent from '@consent-nextjs/popup';
+import { PopupConsent } from '@consent-nextjs';
+// import { PopupConsent } from '@consent-nextjs/ui/PopupConsent';
+// import { BannerConsent } from '@consent-nextjs/ui/BannerConsent';
 import { useConsent } from './consent';
 
 const Popup = () => {
@@ -37,20 +45,22 @@ const Popup = () => {
 
   if (!showPopup) return null;
   return (
-    <PopupConsent
-      areaTop={<b>{enUS.title}</b>}
-      areaBottom={
-        <>
-          <a href="/privacy" style={{ textAlign: 'center' }}>
-            Privacy Policy
-          </a>
-          <button onClick={() => onConsentClick()}>{enUS.buttonConsent}</button>
-          <button onClick={() => onRejectClick()}>{enUS.buttonReject}</button>
-        </>
-      }
-    >
-      {enUS.consentGeneral}
-    </PopupConsent>
+    <div data-comp="consent-nextjs-overlay">
+      <PopupConsent
+        areaTop={<b>{enUS.title}</b>}
+        areaBottom={
+          <>
+            <a href="/privacy" style={{ textAlign: 'center' }}>
+              Privacy Policy
+            </a>
+            <button onClick={() => onConsentClick()}>{enUS.buttonConsent}</button>
+            <button onClick={() => onRejectClick()}>{enUS.buttonReject}</button>
+          </>
+        }
+      >
+        {enUS.consentGeneral}
+      </PopupConsent>
+    </div>
   );
 };
 
@@ -86,8 +96,8 @@ export default ClientProvider;
 
 // --- layout.tsx
 // default theme, dark and light
-// import '@consent-nextjs/popup/style.css';
-import 'consent-nextjs/popup/style.css'
+import 'consent-nextjs/ui/style-popup.css';
+import 'consent-nextjs/ui/style-overlay.css';
 const Layout = () => {
   return (
     <html lang="en">
@@ -99,6 +109,34 @@ const Layout = () => {
 };
 ```
 
-# Caveat
+# Alternative/Banner Style UI
 
-- next.js 14 currently has bugs regarding client component. it is encoraged to use nextjs canary version.
+```jsx
+import { enUS } from '@consent-nextjs/lang';
+import { BannerConsent } from '@consent-nextjs';
+// import { BannerConsent } from '@consent-nextjs/ui/BannerConsent';
+import { useConsent } from './consent';
+const Popup = () => {
+  const { consentState, onRejectClick, onConsentClick } = useConsent();
+  const showPopup = consentState.consent === 'idle' && consentState.showPopup;
+
+  if (!showPopup) return null;
+  return (
+    <div data-comp="consent-nextjs-overlay">
+      <BannerConsent
+        areaControl={
+          <>
+            <button onClick={() => onConsentClick()}>{enUS.buttonConsent}</button>
+            <button onClick={() => onRejectClick()}>{enUS.buttonReject}</button>
+          </>
+        }
+      >
+        <>
+          <p>{enUS.consentGeneral}</p>
+          <a href="/privacy" style={{ textAlign: 'center' }}>Privacy Policy</a>
+        </>
+      </BannerConsent>
+    </div>
+  );
+};
+```

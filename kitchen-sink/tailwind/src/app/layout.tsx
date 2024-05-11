@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import '@/styles/globals.css';
+// import '@/styles/globals.css';
 import '@consent-nextjs/ui/style-popup.css';
 import '@consent-nextjs/ui/style-banner.css';
 import '@consent-nextjs/ui/style-overlay.css';

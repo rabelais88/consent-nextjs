@@ -22,6 +22,14 @@ npm i @consent-nextjs/client @consent-nexjts/ui @consent-nextjs/lang
 - `@consent-nextjs/ui`: popup, banner UI
 - `@consent-nextjs/lang`: languages
 
+# Screenshot
+
+- Popup UI
+![popup screenshot](./consent-nextjs-screenshot-popup.png)
+
+- Banner UI
+![banner screenshot](./consent-nextjs-screenshot-banner.png)
+
 # Get Started
 
 ```tsx
