@@ -1,0 +1,11 @@
+{
+  "extends": "../../tsconfig.pkg.json",
+  "exclude": ["node_modules"],
+  "include": ["src/**/*"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "tslib": ["node_modules/tslib/tslib.d.ts"]
+    }
+  }
+}

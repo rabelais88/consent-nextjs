@@ -1,0 +1,43 @@
+{
+  "name": "@consent-nextjs/lang",
+  "version": "1.0.0-beta.0",
+  "description": "cookie and private data consent management in Next.js with lightning-fast setup",
+  "keywords": [
+    "nextjs",
+    "cookie",
+    "cookie-consent",
+    "data-consent",
+    "gdpr",
+    "data-privacy",
+    "compliance"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rabelais88/consent-nextjs"
+  },
+  "author": "Park Sung Ryeol(sungryeolp@gmail.com)",
+  "source": "src/index.ts",
+  "main": "dist/cjs/bundle.js",
+  "module": "dist/esm/bundle.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "clean": "rimraf dist"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/cjs/index.d.ts",
+      "require": "./dist/cjs/bundle.js",
+      "import": "./dist/esm/bundle.js"
+    }
+  },
+  "devDependencies": {
+    "rimraf": "^5.0.5",
+    "rollup": "^4.17.2",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "tslib": "^2.6.2",
+    "typescript": "^5.4.5"
+  }
+}

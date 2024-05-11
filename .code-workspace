@@ -1,0 +1,11 @@
+{
+  "folders": [
+    { "path": "." },
+    { "path": "./dev" },
+    { "path": "./example" },
+    { "path": "./packages/client" },
+    { "path": "./packages/ui" },
+    { "path": "./packages/lang" },
+    { "path": "./packages/all-in-one" },
+  ],
+}

@@ -1,0 +1,1 @@
+check `consent-nextjs` package for more info.

@@ -1,0 +1,11 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "search.exclude": {
+    "**/dist/**/*": true,
+    "**/node_modules/**/*": true
+  },
+  "[markdown]": {
+    "editor.formatOnSave": false
+  }
+}

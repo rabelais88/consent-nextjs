@@ -1,0 +1,61 @@
+/* default theme, cn stands for consent-nextjs */
+:root {
+  --cn-rgb-bg: 255, 255, 255;
+  --cn-rgb-fg: 0, 0, 0;
+  --cn-color-bg: rgb(var(--cn-rgb-bg));
+  --cn-color-fg: rgb(var(--cn-rgb-fg));
+  --cn-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --cn-rgb-bg: 0, 0, 0;
+    --cn-rgb-fg: 255, 255, 255;
+  }
+}
+
+*[data-comp='consent-nextjs-banner'] {
+  box-shadow: rgba(var(--cn-rgb-fg), 0.4) 0px 0.6em 1.8em;
+  line-height: 1.2rem;
+  font-size: 1rem;
+  letter-spacing: 0.02rem;
+  font-family: var(--cn-font);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 30px;
+  background-color: var(--cn-color-bg);
+  color: var(--cn-color-fg);
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+}
+
+*[data-comp='consent-nextjs-banner'] .area-control {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+*[data-comp='consent-nextjs-banner'] .area-control button {
+  background-color: rgb(var(--cn-rgb-fg));
+  color: rgb(var(--cn-rgb-bg));
+  outline: revert;
+  border: none;
+  padding: 10px 20px 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+*[data-comp='consent-nextjs-banner'] .area-control button:hover {
+  background-color: rgba(var(--cn-rgb-fg), 0.8);
+}
+
+@media only screen and (min-width: 600px) {
+  *[data-comp='consent-nextjs-banner'] {
+    flex-direction: row;
+  }
+}

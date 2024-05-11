@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "lib": ["dom", "ESNext"],
+    "declaration": true,
+    "esModuleInterop": true,
+    "jsx": "react",
+    "outDir": "dist",
+    "sourceMap": true
+  }
+}
