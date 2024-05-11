@@ -24,11 +24,11 @@ npm i @consent-nextjs/client @consent-nexjts/ui @consent-nextjs/lang
 
 # Screenshot
 
-- Popup UI
-![popup screenshot](./consent-nextjs-screenshot-popup.png)
+## Popup UI
+![popup screenshot](https://github.com/rabelais88/consent-nextjs/blob/main/consent-nextjs-screenshot-popup.png?raw=true)
 
-- Banner UI
-![banner screenshot](./consent-nextjs-screenshot-banner.png)
+## Banner UI
+![banner screenshot](https://github.com/rabelais88/consent-nextjs/blob/main/consent-nextjs-screenshot-banner.png?raw=true)
 
 # Get Started
 
