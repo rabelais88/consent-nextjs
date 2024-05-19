@@ -1,12 +1,14 @@
 # consent-nextjs
 - Cookie & Private Data Usage Consent Management System for Next.js.
 - Aims to provide fastest way to setting it up.
-- Developer experience oriented.
+- Developer experience oriented. Easy to modify.
+- Provides React Store as controller.
 
 # Caveat
 
 - Next.js 14 currently has bugs regarding client component. It is encoraged to use nextjs canary version.
 - 👨‍⚖️The legal compliance of the provided text may vary by country. It's best to use it only for quick initial deployment and verification, and afterward, it's a good idea to seek legal advice.
+- Languages currently provided by the package: English(en-us), Korean(ko-kr), Japanese(ja-jp).
 
 # Install
 

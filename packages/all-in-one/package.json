@@ -1,6 +1,6 @@
 {
   "name": "consent-nextjs",
-  "version": "1.0.0-beta.1",
+  "version": "1.0.0-beta.2",
   "description": "cookie and private data consent management in Next.js with lightning-fast setup",
   "keywords": [
     "nextjs",
@@ -29,10 +29,12 @@
     "prepublish": "cp ../../README.md ./README.md"
   },
   "dependencies": {
-    "@consent-nextjs/client": "1.0.0",
-    "@consent-nextjs/lang": "1.0.0",
-    "@consent-nextjs/ui": "1.0.0",
-    "react": "^18.3.1"
+    "@consent-nextjs/client": "1.0.0-beta.2",
+    "@consent-nextjs/lang": "1.0.0-beta.2",
+    "@consent-nextjs/ui": "1.0.0-beta.2"
+  },
+  "peerDependencies": {
+    "react": ">=18"
   },
   "devDependencies": {
     "@types/node": "^20",
