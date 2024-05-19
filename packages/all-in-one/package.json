@@ -32,9 +32,9 @@
     "react": ">=18"
   },
   "dependencies": {
-    "@consent-nextjs/client": "1.0.0-beta.7",
-    "@consent-nextjs/lang": "1.0.0-beta.7",
-    "@consent-nextjs/ui": "1.0.0-beta.7"
+    "@consent-nextjs/client": "1.0.0-beta.8",
+    "@consent-nextjs/lang": "1.0.0-beta.8",
+    "@consent-nextjs/ui": "1.0.0-beta.8"
   },
   "bundledDependencies": [
     "@consent-nextjs/client",
