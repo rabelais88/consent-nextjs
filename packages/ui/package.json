@@ -1,6 +1,6 @@
 {
   "name": "@consent-nextjs/ui",
-  "version": "1.0.0-beta.2",
+  "version": "1.0.0-beta.3",
   "description": "cookie and private data consent management in Next.js with lightning-fast setup",
   "keywords": [
     "nextjs",
@@ -27,7 +27,7 @@
     "clean": "rimraf dist"
   },
   "dependencies": {
-    "@consent-nextjs/client": "1.0.0-beta.2"
+    "@consent-nextjs/client": "1.0.0-beta.3"
   },
   "peerDependencies": {
     "react": ">=18"

@@ -43,8 +43,8 @@ import { initUseConsent } from 'consent-nextjs';
 export const { useConsent } = initUseConsent();
 
 // --- components/Popup.tsx
-import { enUS } from '@consent-nextjs/lang';
-import { PopupConsent } from '@consent-nextjs';
+import { PopupConsent, enUS } from 'consent-nextjs';
+// import { enUS } from '@consent-nextjs/lang';
 // import { PopupConsent } from '@consent-nextjs/ui/PopupConsent';
 // import { BannerConsent } from '@consent-nextjs/ui/BannerConsent';
 import { useConsent } from './consent';
@@ -123,7 +123,7 @@ const Layout = () => {
 
 ```jsx
 import { enUS } from '@consent-nextjs/lang';
-import { BannerConsent } from '@consent-nextjs';
+import { BannerConsent } from 'consent-nextjs';
 // import { BannerConsent } from '@consent-nextjs/ui/BannerConsent';
 import { useConsent } from './consent';
 const Popup = () => {
