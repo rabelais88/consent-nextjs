@@ -1,6 +1,6 @@
 {
   "name": "consent-nextjs",
-  "version": "1.0.0-beta.7",
+  "version": "1.0.0-beta.8",
   "description": "cookie and private data consent management in Next.js with lightning-fast setup",
   "keywords": [
     "nextjs",
@@ -52,8 +52,14 @@
     "typescript": "^5.4.5"
   },
   "exports": {
-    "./popup/style.css": {
-      "default": "./node_modules/@consent-nextjs/popup/dist/style.css"
+    "./ui/style-banner.css": {
+      "default": "./node_modules/@consent-nextjs/ui/dist/style-banner.css"
+    },
+    "./ui/style-overlay.css": {
+      "default": "./node_modules/@consent-nextjs/ui/dist/style-overlay.css"
+    },
+    "./ui/style-popup.css": {
+      "default": "./node_modules/@consent-nextjs/ui/dist/style-popup.css"
     },
     ".": {
       "import": "./dist/esm/bundle.js",
