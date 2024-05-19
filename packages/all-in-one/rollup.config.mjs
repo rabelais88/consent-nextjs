@@ -1,5 +1,4 @@
 import typescript from 'rollup-plugin-typescript2';
-import { nodeResolve } from '@rollup/plugin-node-resolve';
 
 /** @type{import('rollup').RollupOptions[]} */
 const bundle = [
@@ -12,9 +11,6 @@ const bundle = [
     plugins: [
       typescript({
         tsconfig: './tsconfig.json',
-      }),
-      nodeResolve({
-        extensions: ['.ts', '.tsx', '.css', '.d.ts'],
       }),
     ],
     external: ['react', 'react-dom', 'next'],

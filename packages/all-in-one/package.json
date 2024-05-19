@@ -42,7 +42,6 @@
     "@consent-nextjs/ui"
   ],
   "devDependencies": {
-    "@rollup/plugin-node-resolve": "^15.2.3",
     "@types/node": "^20",
     "@types/react": "^18",
     "rimraf": "^5.0.5",
